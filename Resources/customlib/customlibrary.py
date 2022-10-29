@@ -18,7 +18,7 @@ class customlibrary:
 
    @staticmethod
    def update_user(token):
-      url = SITE_URL + 'api/users/api_new_user'
+      url = SITE_URL + 'api/users/python_api_new_user'
       payload = json.dumps({"firstname": "firstname_updated"})
       headers={"content-type": "application/json", "token": token}
       try:
@@ -63,7 +63,7 @@ class customlibrary:
 
    @staticmethod
    def get_user_information(token):
-      url = SITE_URL + 'api/users/api_new_user'
+      url = SITE_URL + 'api/users/python_api_new_user'
       headers={"content-type": "application/json", "token": token}
       response = requests.get(url, headers=headers)
       user_information = json.loads(response.text)['payload']
